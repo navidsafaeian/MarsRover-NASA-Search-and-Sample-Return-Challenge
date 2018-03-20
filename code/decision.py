@@ -64,7 +64,7 @@ def decision_step(Rover):
                 if -15 < avg_rock_angle < 15:
                     # Only drive straight for sample if it's within 13 deg
                     print('APPROACHING SAMPLE HEAD ON')
-                    if max(Rover.rock_dist) < 20:
+                    if max(Rover.rock_dist) < 15: #20
                         Rover.throttle = 0
                         Rover.brake = Rover.brake_set
                         Rover.steer = avg_rock_angle
@@ -74,14 +74,14 @@ def decision_step(Rover):
                         Rover.steer = avg_rock_angle
                 elif -50 < avg_rock_angle < 50:
                     print('ROTATING TO SAMPLE: ', avg_rock_angle)
-                    if Rover.vel > 0 and max(Rover.rock_dist) < 50:
+                    if Rover.vel > 0 and max(Rover.rock_dist) < 40: #50
                         Rover.throttle = 0
                         Rover.brake = Rover.brake_set
                         Rover.steer = 0
                     else:
                         Rover.throttle = 0
                         Rover.brake = 0
-                        Rover.steer = avg_rock_angle/6
+                        Rover.steer = avg_rock_angle/4 #avg_rock_angle/6
                 else:
                     # Keep the logic simple and ignore samples +/-13 degrees
                     print('LOST SIGHT OF THE SAMPLE')

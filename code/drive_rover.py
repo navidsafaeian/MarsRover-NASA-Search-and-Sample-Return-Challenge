@@ -57,7 +57,7 @@ class RoverState():
         self.ground_truth = ground_truth_3d # Ground truth worldmap
         self.mode = 'forward' # Current mode (can be forward or stop)
         self.throttle_set = 0.2 # Throttle setting when accelerating
-        self.brake_set = 5 # Brake setting when braking
+        self.brake_set = 2 # Brake setting when braking
         # The stop_forward and go_forward fields below represent total count
         # of navigable terrain pixels.  This is a very crude form of knowing
         # when you can keep going and when you should stop.  Feel free to
@@ -78,7 +78,7 @@ class RoverState():
         self.samples_found = 0 # To count the number of samples found
         self.near_sample = 0 # Will be set to telemetry value data["near_sample"]
         self.sample_seen = False # If a sample is detected, change to True
-        self.sample_max_search = 30 # Max seconds allowed to get seen sample
+        self.sample_max_search = 40 # Max seconds allowed to get seen sample #30
         self.sample_timer = time.time() # Time for when sample was first seen
         self.rock_angle = None # Tracks the angle to the sample
         self.rock_dist = None # Tracks the distance to the sample

@@ -1,7 +1,6 @@
 
 
-# Mars Rover Project: 
-## Search and Sample Return NASA Chalenge
+## Mars Rover Project: NASA Search and Sample Return Challenge!
 
 This search and sample return project was based after the [NASA sample return challenge](https://www.nasa.gov/directorates/spacetech/centennial_challenges/sample_return_robot/index.html), and it provides experience with the three essential elements of robotics, which are perception, decision making and actuation. This specific project uses the Unity game engine to simulate the environment.
 
